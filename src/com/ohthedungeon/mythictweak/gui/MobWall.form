@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jScrollPane1" alignment="0" pref="538" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jScrollPane1" alignment="0" pref="366" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="Create pw.yml in `plugins\u005cMythicMobs\u005cSkills\u005c&#xa;Content of pw.yml:&#xa;&#xa;PreventWalled:&#xa;  Conditions:&#xa;  - inblock{b=AIR} false&#xa;  Skills:&#xa;  - remove @Self&#xa;&#xa;&#xa;Edit your mythicmobs&apos; yml in`plugins\u005cMythicMobs\u005cMobs\u005c&apos;&#xa;&#xa;Add the following skills:&#xa;  Skills:&#xa;  - skill{s=PreventWalled} @Self ~onSpawn&#xa;&#xa;Example(For SkeletalKnight in ExampleMobs.yml):&#xa;&#xa;SkeletalKnight:&#xa;  Type: WITHER_SKELETON&#xa;  Display: &apos;&amp;aSkeletal Knight&apos;&#xa;  Health: 40&#xa;  Damage: 8&#xa;  Equipment:&#xa;  - IRON_HELMET HEAD&#xa;  - IRON_CHESTPLATE CHEST&#xa;  - IRON_LEGGINGS LEGS&#xa;  - IRON_BOOTS FEET&#xa;  - IRON_SWORD HAND&#xa;  - SHIELD OFFHAND&#xa;  Drops:&#xa;  - GOLD_NUGGET{display=&quot;Gold Coin&quot;} 1to2 0.5&#xa;  LevelModifiers:&#xa;  - health 5&#xa;  - damage 0.5&#xa;  Options:&#xa;    MovementSpeed: 0.1&#xa;  Skills:&#xa;  - skill{s=PreventWalled} @Self ~onSpawn" containsInvalidXMLChars="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

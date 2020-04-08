@@ -1,0 +1,24 @@
+name: OTD_MythicTweak
+authors: [shadow_wind]
+main: com.ohthedungeon.mythictweak.OTD_MythicTweak
+depend: [Oh_the_dungeons_youll_go, MythicMobs]
+load: postworld
+api-version: 1.15
+version: 1.0
+commands:
+  otd_mt_reload:
+    aliases: [omr]
+    description: Reload the config
+    usage: /<command>
+  otd_mt_preventwalled:
+    aliases: [otd_mt_pw, ompw]
+    description: Learn how to prevent walled for MythicMobs
+    usage: /<command>
+  otd_mt_info:
+    aliases: [omi]
+    description: Show information
+    usage: /<command>
+permissions:
+  otd_mt.admin:
+    default: op
+    description: Using all otd_mt command
