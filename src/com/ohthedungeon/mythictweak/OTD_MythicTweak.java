@@ -36,6 +36,15 @@ public class OTD_MythicTweak extends JavaPlugin {
     @Override
     public void onEnable() {
         OTD_MythicTweak.instance = this;
+        
+        SpigotUpdater updater = new SpigotUpdater(this, 77129);
+        try {
+            if (updater.checkForUpdates())
+                consoleInfo(ChatColor.BLUE + "[OTD_MythicTweak] An update was found! Download: https://www.spigotmc.org/resources/otd_mythictweak.77129/");
+        } catch (Exception e) {
+        }
+
+        
         try {
             Class otd = Class.forName("otd.Main");
             Field api = otd.getDeclaredField("api_version");

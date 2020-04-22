@@ -4,7 +4,7 @@ main: com.ohthedungeon.mythictweak.OTD_MythicTweak
 depend: [Oh_the_dungeons_youll_go, MythicMobs]
 load: postworld
 api-version: 1.15
-version: 1.0
+version: 3.0
 commands:
   otd_mt_reload:
     aliases: [omr]

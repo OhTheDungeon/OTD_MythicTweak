@@ -54,10 +54,34 @@ public class DungeonLevelEditor extends javax.swing.JFrame {
     
     private void createComponentMap() {
         componentMap = new HashMap<>();
-        Component[] components = this.getContentPane().getComponents();
-        for (Component component : components) {
-            componentMap.put(component.getName(), component);
-        }
+        componentMap.put("jTextArea_act",jTextArea_act);
+        componentMap.put("jTextArea_bat",jTextArea_bat);
+        componentMap.put("jTextArea_blaze",jTextArea_blaze);
+        componentMap.put("jTextArea_cave_spider",jTextArea_cave_spider);
+        componentMap.put("jTextArea_cooldown",jTextArea_cooldown);
+        componentMap.put("jTextArea_creeper",jTextArea_creeper);
+        componentMap.put("jTextArea_enderman",jTextArea_enderman);
+        componentMap.put("jTextArea_leashrange",jTextArea_leashrange);
+        componentMap.put("jTextArea_magma_cube",jTextArea_magma_cube);
+        componentMap.put("jTextArea_maxmob",jTextArea_maxmob);
+        componentMap.put("jTextArea_moblevel",jTextArea_moblevel);
+        componentMap.put("jTextArea_mobsperspawn",jTextArea_mobsperspawn);
+        componentMap.put("jTextArea_radius",jTextArea_radius);
+        componentMap.put("jTextArea_silverfish",jTextArea_silverfish);
+        componentMap.put("jTextArea_skeleton",jTextArea_skeleton);
+        componentMap.put("jTextArea_slime",jTextArea_slime);
+        componentMap.put("jTextArea_spider",jTextArea_spider);
+        componentMap.put("jTextArea_warmup",jTextArea_warmup);
+        componentMap.put("jTextArea_witch",jTextArea_witch);
+        componentMap.put("jTextArea_wither",jTextArea_wither);
+        componentMap.put("jTextArea_zombie",jTextArea_zombie);
+        componentMap.put("jTextArea_zombie_pigman",jTextArea_zombie_pigman);
+
+//        componentMap = new HashMap<>();
+//        Component[] components = this.getComponents();
+//        for (Component component : components) {
+//            componentMap.put(component.getName(), component);
+//        }
     }
 
     private Component getComponentByName(String name) {
@@ -87,6 +111,7 @@ public class DungeonLevelEditor extends javax.swing.JFrame {
     private List<String> getMobListFromComponent(MythicSpawnerType type) {
         String name = type.toString();
         Component c = getComponentByName("jTextArea_" + name);
+        System.out.println("jTextArea_" + name);
         if(c == null || !(c instanceof javax.swing.JTextArea)) return new ArrayList<>();
         
         javax.swing.JTextArea jTextArea = (javax.swing.JTextArea) c; 
@@ -777,7 +802,12 @@ public class DungeonLevelEditor extends javax.swing.JFrame {
             List<String> mobs = map.get(type.toString());
             mobs.clear();
             for(String mob : mobs_tmp) mobs.add(mob);
+            map.put(type.toString(), mobs);
         }
+        
+        System.out.println(SpawnerConfig.getRoguelikeMobList().get(level));
+        
+//        SpawnerConfig.getRoguelikeMobList().put(level, map);
                 
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
